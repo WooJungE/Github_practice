@@ -34,3 +34,8 @@ void main(){
   for (int i = 0; i<10; i++ car.go();
   car.fuel_check();
 }
+
+//result
+//연료 : 100
+//연료 : 80
+//연료 : 160
