@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>예약하기</title>
+  </head>
+  <body>
+    <h2>레스토랑 예약하기</h2>
+    <form action="reservation.php" method="get">
+      <fieldset>
+        <legend>예약자 정보</legend>
+        <span>예약자 : </span><input type="text" name="u_name" value="" required/><br/>
+        <span>연략처 : </span><input type="tel" name="u_tel" placeholder="000-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"/><br/>
+        <span>예약인원 : </span>
+        <select name="people_num">
+          <option value="2명">2명</option>
+          <option value="3명">3명</option>
+          <option value="4명">4명</option>
+          <option value="5명+">5명 이상</option>
+        </select>
+      </fieldset>
+      <br/>
+      <fieldset>
+        <legend>예약 시간 선택</legend>
+        <input type="date" name="u_date"/>
+        <input type="time" name="u_time" min="10:00" max="20:00"/>
+      </fieldset>
+      <br/>
+      <fieldset>
+        <legend>메뉴 선택</legend>
+        <input type="radio" name="u_menu" value="코스_A" checked/>코스 A
+        <input type="radio" name="u_menu" value="코스_B">코스_B
+        <input type="radio" name="u_menu" value="코스_C">코스_C
+        <input type="radio" name="u_menu" value="코스_D">코스_D
+        <br/>
+        <span>요청사항: </span><br/>
+        <textarea name="memo" cols="50" rows="3"></textarea>
+      </fieldset><br/>
+      <input type="submit" value="예약" />&nbsp;<input type="reset" value="취소"/>
+      </form>
+  </body>
+</html>
