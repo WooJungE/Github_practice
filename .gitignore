@@ -1,0 +1,8 @@
+
+*.pyc
+
+Lib/
+myvenv/Lib/
+Scripts/
+*.cfg
+
